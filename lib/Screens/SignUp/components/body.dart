@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_welcome_demo/Screens/Login/login_screen.dart';
 import 'package:flutter_welcome_demo/Screens/SignUp/components/already_have_an_account.dart';
 import 'package:flutter_welcome_demo/Screens/SignUp/components/backgroud.dart';
 import 'package:flutter_welcome_demo/Screens/Login/components/rounded_input_field.dart';
@@ -44,7 +45,13 @@ class Body extends StatelessWidget {
               text: 'SIGNUP',
               press: () {},
             ),
-            AlreadyHaveAnAccount(),
+            AlreadyHaveAnAccount(onPress: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return LoginScreen();
+                }
+              ));
+            },),
             OrDivider(),
             Container(
               width: size.width * 0.6,

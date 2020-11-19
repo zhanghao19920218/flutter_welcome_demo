@@ -50,7 +50,7 @@ class Body extends StatelessWidget {
           ),
           AlreadyHaveAnAccount(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (BuildContext context) {
                   return SignUpScreen();
                 }
